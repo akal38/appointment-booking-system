@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام حجز المواعيد</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">نظام المواعيد</h1>
+            <button class="nav-button" onclick="location.href='admin.html'">لوحة التحكم</button>
+        </div>
+    </nav>
+
+    <!-- قسم الخدمات -->
+    <section class="services-section">
+        <h2>خدماتنا</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <h3>حلاقة رجالية</h3>
+                <p>خدمة حلاقة متكاملة مع تهذيب اللحية</p>
+            </div>
+            <div class="service-card">
+                <h3>علاج طبيعي</h3>
+                <p>جلسات علاج طبيعي متخصصة لآلام الظهر والمفاصل</p>
+            </div>
+            <div class="service-card">
+                <h3>استشارة قانونية</h3>
+                <p>استشارات قانونية متخصصة مع محامين معتمدين</p>
+            </div>
+            <div class="service-card">
+                <h3>تجميل نسائي</h3>
+                <p>خدمات تجميلية متكاملة بأحدث التقنيات</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- نموذج الحجز -->
+    <section class="booking-section">
+        <h2>احجز موعدك الآن</h2>
+        <form id="booking-form" class="booking-form">
+            <div class="form-group">
+                <label for="fullname">الاسم الكامل</label>
+                <input type="text" id="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">رقم الهاتف</label>
+                <input type="tel" id="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="date">التاريخ</label>
+                <input type="date" id="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">الوقت</label>
+                <input type="time" id="time" required>
+            </div>
+            <div class="form-group">
+                <label for="service">الخدمة المطلوبة</label>
+                <select id="service" required>
+                    <option value="">اختر الخدمة</option>
+                    <option value="حلاقة رجالية">حلاقة رجالية</option>
+                    <option value="علاج طبيعي">علاج طبيعي</option>
+                    <option value="استشارة قانونية">استشارة قانونية</option>
+                    <option value="تجميل نسائي">تجميل نسائي</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-btn">احجز الآن</button>
+        </form>
+    </section>
+
+    <!-- نافذة التنبيه -->
+    <div id="alert-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="alert-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
